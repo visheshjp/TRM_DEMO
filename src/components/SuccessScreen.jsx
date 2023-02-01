@@ -1,8 +1,33 @@
+/************************************************************************************************************
+ * 
+ * 
+Author: Vishesh Jaisahay Pathak
+Purpose: TRM Labs Take Home Assignment
+File Details: Contains implementation details of displaying transfer assets results (Success/Failure)
+*
+*
+*************************************************************************************************************/
+/*
+
+Importing all the required libraries
+
+*/
+
+
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Alert } from 'react-bootstrap';
 import { Spinner } from 'react-bootstrap';
 
+/*
+
+This method is to display success/failure message on the form UI after the User submits a transfer request.
+
+For the purpose of this project, we have implemented transfers in BTC as we were not aware of destination addresses of other chains.
+
+For other chains and currencies, we display appropriate error message on the UI to the User.
+
+*/
 export const SuccessScreen = (props) => {
     const [loading, setLoading] = useState(false);
     console.log(props.data)
